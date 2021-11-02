@@ -25,7 +25,7 @@ public class DepartmentServiceImpl implements DepartmentService{
     }
 
     @Override
-    public Department fetDepartmentById(Long departmentId) {
+    public Department fetchDepartmentById(Long departmentId) {
         return departmentRepository.findById(departmentId).get();
     }
 
