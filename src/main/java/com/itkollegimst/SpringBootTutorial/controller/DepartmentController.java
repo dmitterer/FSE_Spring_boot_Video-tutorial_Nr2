@@ -2,6 +2,7 @@ package com.itkollegimst.SpringBootTutorial.controller;
 
 //import com.fasterxml.jackson.databind.annotation.JsonValueInstantiator;
 import com.itkollegimst.SpringBootTutorial.entity.Department;
+import com.itkollegimst.SpringBootTutorial.error.DepartmentNotFoundException;
 import com.itkollegimst.SpringBootTutorial.service.DepartmentService;
 import com.itkollegimst.SpringBootTutorial.service.DepartmentServiceImpl;
 import org.slf4j.Logger;
@@ -39,7 +40,7 @@ public class DepartmentController {
     }
 
     @GetMapping("/departments/{id}")
-    public Department fetchDepartmentById(@PathVariable("id") Long departmentId) {
+    public Department fetchDepartmentById(@PathVariable("id") Long departmentId) throws DepartmentNotFoundException {
 
         return departmentService.fetchDepartmentById(departmentId);
 
