@@ -16,6 +16,7 @@ class DepartmentRepositoryTest {
     @Autowired
     private  DepartmentRepository departmentRepository;
 
+    @Autowired
     private TestEntityManager entityManager;
 
     @BeforeEach
