@@ -38,11 +38,11 @@ welcome:
   message: Welcome to Daily Code Buffer with Dominik!!
 
   # Managing (Enable) Endpoints
-  management:
-    endpoints:
-      web:
-        exposure:
-          include: "*"
+management:
+   endpoints:
+     web:
+       exposure:
+        include: "*"
 
 
 ---
