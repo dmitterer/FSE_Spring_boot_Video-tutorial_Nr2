@@ -71,7 +71,7 @@ class DepartmentControllerTest {
         Mockito.when(departmentService.fetchDepartmentById(1L))
                  .thenReturn(department);
 
-        mockMvc.perform(get("departments/1")
+        mockMvc.perform(get("/departments/1")
         .contentType(MediaType.APPLICATION_JSON))
         .andExpect(status().isOk())
         .andExpect(jsonPath("$.departmentName").value(department.getDepartmentName()));
