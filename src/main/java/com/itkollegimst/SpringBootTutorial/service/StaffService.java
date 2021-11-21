@@ -12,9 +12,9 @@ public interface StaffService {
 
     Staff fetchStaffById(Long staffId) throws StaffNotFoundException;
 
-    String deleteStaffById(Long staffId);
+    void deleteStaffById(Long staffId);
 
-    Staff updateStaff(Long StaffId, Staff staff) throws StaffNotFoundException;
+    Staff updateStaff(Long staffId, Staff staff) throws StaffNotFoundException;
 
-    Staff fetchStaffByName(String staffLastName);
+    Staff fetchStaffByLastName(String staffLastName);
 }

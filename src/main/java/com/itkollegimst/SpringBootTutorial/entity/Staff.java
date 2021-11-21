@@ -17,14 +17,14 @@ public class Staff {
 
 
     @Id
-    @GeneratedValue( strategy = GenerationType.AUTO)
-    private Long StaffId;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long staffId;
     @NotBlank(message = "Please Add Firstname for Staff")
     private String staffFirstName;
     @NotBlank(message = "Please Add Lastname for Staff")
     private String staffLastName;
 
-    //Entität: Department Referenzierung
+    // Entität: Department Referenzierung
     @ManyToOne
     private Department department;
 

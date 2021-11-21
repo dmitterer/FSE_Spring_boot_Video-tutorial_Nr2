@@ -21,7 +21,7 @@ public class StaffController {
     public final Logger LOGGER = LoggerFactory.getLogger(StaffController.class);
 
     @PostMapping("/staff")
-    public Staff saveStaff(@Valid  @RequestBody Staff staff){
+    public Staff saveStaff(@Valid @RequestBody Staff staff){
         LOGGER.info("Inside saveStaff of StaffController");
         return staffService.saveStaff(staff);
     }
@@ -33,7 +33,7 @@ public class StaffController {
     }
 
     @GetMapping("/staff/{id}")
-    public Staff fetchStaffById(@PathVariable("id")Long staffId) throws StringIndexOutOfBoundsException, StaffNotFoundException {
+    public Staff fetchStaffById(@PathVariable("id") Long staffId) throws StaffNotFoundException {
         return staffService.fetchStaffById(staffId);
     }
 
@@ -50,7 +50,7 @@ public class StaffController {
 
     @GetMapping("/staff/name/{name}")
     public Staff fetchStaffByName(@PathVariable("name") String staffLastName){
-        return staffService.fetchStaffByName(staffLastName);
+        return staffService.fetchStaffByLastName(staffLastName);
     }
 }
 
