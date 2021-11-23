@@ -11,7 +11,6 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.ResultActions;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
@@ -48,7 +47,7 @@ public class StaffControllerTest {
                           .thenReturn(staff);
 
             //POST-Operation
-            mockMvc.perform(post("/Staff")
+            mockMvc.perform(post("/staff")
                     .contentType(MediaType.APPLICATION_JSON)
                     .content("{\n" +
                             "\t\"StaffFirstName\":\"Dominik\",\n" +

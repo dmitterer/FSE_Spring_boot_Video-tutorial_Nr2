@@ -26,7 +26,7 @@ public class Department {
 
     //Entität: Staff Referenzierung
 
-    @OneToMany(mappedBy = "department")
+   @OneToMany(mappedBy = "department")
     private List<Staff> staff;
 
 }

@@ -25,7 +25,7 @@ public class Staff {
     private String staffLastName;
 
     // Entität: Department Referenzierung
-    @ManyToOne
+  @ManyToOne
     private Department department;
 
 

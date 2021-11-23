@@ -6,7 +6,6 @@ spring:
     active: qa
 
 ---
-
 spring:
   profiles: dev
   datasource:

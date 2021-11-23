@@ -1,6 +1,6 @@
 package com.itkollegimst.SpringBootTutorial.service;
 
-
+import com.itkollegimst.SpringBootTutorial.entity.Department;
 import com.itkollegimst.SpringBootTutorial.entity.Staff;
 import com.itkollegimst.SpringBootTutorial.repository.StaffRepository;
 import org.junit.jupiter.api.BeforeEach;
@@ -20,7 +20,7 @@ public class StaffServiceTest {
         @Autowired
         private StaffService staffService;
         @MockBean
-        private StaffRepository staffReppsitory;
+        private StaffRepository staffRepository;
 
         @BeforeEach
         void setUp() {
@@ -30,7 +30,7 @@ public class StaffServiceTest {
                     .staffId(1L)
                     .build();
 
-            Mockito.when(staffReppsitory.findByStaffLastNameIgnoreCase("Mitterer"))
+            Mockito.when(staffRepository.findByStaffLastNameIgnoreCase("Mitterer"))
                     .thenReturn(staff);
         }
         @Test
